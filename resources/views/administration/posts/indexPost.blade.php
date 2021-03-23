@@ -15,10 +15,10 @@
                 <h5 class="card-title">{{$post->titre}}</h5>
                 <p class="card-text">{{$post->texte}}</p>
                 <h6 class="text-muted">{{$post->user->name}}</h6>
-                <a href="{{route('post.show',$post)}}" class="btn btn-success btn-sm">Show</a>
                 @can('edit-post')
-                  <a href="{{route('post.edit',$post)}}" class="btn btn-warning btn-sm">Edit</a>  
+                <a href="{{route('post.show',$post)}}" class="btn btn-success btn-sm">Show</a>
                 @endcan
+                <a href="{{route('post.edit',$post)}}" class="btn btn-warning btn-sm">Edit</a>  
             </div>
             @endforeach
             </div>
